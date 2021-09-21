@@ -11,6 +11,34 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./paginas/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./paginas/registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'contatos',
+    loadChildren: () => import('./paginas/contatos/contatos.module').then( m => m.ContatosPageModule)
+  },
+  {
+    path: 'edita-contato',
+    loadChildren: () => import('./paginas/edita-contato/edita-contato.module').then( m => m.EditaContatoPageModule)
+  },
+  {
+    path: 'edita-tarefa',
+    loadChildren: () => import('./paginas/edita-tarefa/edita-tarefa.module').then( m => m.EditaTarefaPageModule)
+  },
+  {
+    path: 'tarefas',
+    loadChildren: () => import('./paginas/tarefas/tarefas.module').then( m => m.TarefasPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./paginas/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
 ];
 
 @NgModule({
