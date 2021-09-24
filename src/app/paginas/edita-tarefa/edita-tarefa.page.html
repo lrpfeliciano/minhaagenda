@@ -1,9 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>edita-tarefa</ion-title>
+    <ion-title>Formulário Tarefa</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-input type="text" 
+        placeholder="Nome"
+        [(ngModel)]="nome"></ion-input>
 
+  <ion-input type="text" 
+        placeholder="Descrição"
+        [(ngModel)]="descricao"></ion-input>
+        
+  <ion-button (click)="cadastrar()">Ok</ion-button>
 </ion-content>
