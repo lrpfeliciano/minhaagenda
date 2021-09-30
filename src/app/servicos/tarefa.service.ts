@@ -20,4 +20,8 @@ export class TarefaService {
   excluir(tarefa) {
     this.firestore.doc("tarefas/"+tarefa.id).delete();
   }
+
+  alterar(id, tarefa){
+    this.firestore.doc("tarefas/"+id).update(tarefa);
+  }
 }

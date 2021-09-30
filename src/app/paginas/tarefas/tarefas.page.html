@@ -25,7 +25,9 @@
       </ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      <ion-button>Alterar</ion-button>
+      <ion-button (click)="inicioAlteracao(it)">
+          Alterar
+      </ion-button>
       <ion-button color="secondary"
         (click)="excluir(it)">
         Excluir

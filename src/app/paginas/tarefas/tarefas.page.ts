@@ -49,4 +49,12 @@ export class TarefasPage implements OnInit {
     this.nav.navigateForward("edita-tarefa");
   }
 
+  inicioAlteracao(tarefa){
+    console.log(tarefa);
+    this.nav.navigateForward(["edita-tarefa", {
+      idtarefa: tarefa.id,
+      nometarefa: tarefa.nome,
+      desctarefa: tarefa.descricao
+    }]);
+  }
 }
